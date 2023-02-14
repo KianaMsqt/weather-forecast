@@ -13,7 +13,7 @@ $(document).ready(function() {
   
       var inputQuery = $searchInput.val().trim();
       var geoQueryURL =
-        "http://api.openweathermap.org/geo/1.0/direct?q=" +
+        "https://api.openweathermap.org/geo/1.0/direct?q=" +
         inputQuery +
         "&limit=1&appid=" +
         apiKey;
