@@ -33,6 +33,8 @@ $(document).ready(function() {
           var $forecastContainer = $("#forecast");
           $forecastContainer.empty(); // Clear the container before adding new content
   
+          $forecastContainer.append(`<h2 class="w-100 mb-3 mt-3 h3">5-Day Forecast:</h2>`);
+
           for (var i = 0; i < 5; i++) {
             var date = forecastData.list[i].dt_txt;
             var iconUrl =
@@ -44,7 +46,7 @@ $(document).ready(function() {
             var windSpeed = forecastData.list[i].wind.speed;
   
             // Create a new HTML element for each day of the forecast
-            var $forecastItem = $("<div>").addClass("forecast-item");
+            var $forecastItem = $("<div>").addClass("forecast-item p-3 m-1 border rounded text-white bg-colored col-sm");
             var $date = $("<div>")
               .addClass("forecast-date")
               .text(date);
@@ -69,7 +71,7 @@ $(document).ready(function() {
             var todayTemp = forecastData.list[0].main.temp;
 
             // Display the temperature on the page
-            $('#today').text("Today's temperature is " + todayTemp + " degrees Celsius.");
+            $('#today').removeClass("empty").text("Today's temperature is " + todayTemp + " degrees Celsius.");
 
           }
         });
