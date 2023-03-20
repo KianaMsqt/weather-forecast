@@ -1,0 +1,12 @@
+.bg-colored {
+    background-color: #637e9a !important;
+}
+
+.btn-primary.search-button {
+    background-color: #255280;
+    border-color: #255280;
+}
+
+.today-forecast.empty {
+    opacity: 0;
+}
