@@ -8,15 +8,10 @@ The Weather Forecast project is a simple application that allows users to retrie
 * Humidity
 
 ## Installation
-To install the Weather Forecast project, follow these steps:
-
-1. Clone the repository to your local machine:
+To install the Weather Forecast project, Clone the repository to your local machine:
 
 `git clone https://github.com/KianaMsqt/weather-forecast.git`
 
-2. Create a .env file in the root directory of the project and add your OpenWeatherMap API key:
-
-`API_KEY=your_api_key_here`
 
 ## Demo
 
