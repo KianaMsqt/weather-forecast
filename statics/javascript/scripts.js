@@ -36,7 +36,14 @@ $(document).ready(function() {
           $forecastContainer.append(`<h2 class="w-100 mb-3 mt-3 h3">5-Day Forecast:</h2>`);
 
           for (var i = 0; i < 5; i++) {
-            var date = forecastData.list[i].dt_txt;
+            
+            // create a Date object in UTC time zone
+            var date = new Date(forecastData.list[i].dt_txt + " UTC");
+            // convert to local time zone
+            date = date.toLocaleString("en-GB", { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone });
+            // remove time from the formatted date
+            date = date.split(',')[0];
+
             var iconUrl =
               "https://openweathermap.org/img/w/" +
               forecastData.list[i].weather[0].icon +
