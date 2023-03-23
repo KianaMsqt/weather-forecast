@@ -19,6 +19,17 @@
     scale: 1.5;
 }
 
+.list-group li {
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.list-group li:hover {
+    background-color: #637e9a;
+    color: #fff;
+}
+
 @media only screen and (max-width: 990px) {
     .list-group:not(.show) {
         visibility: hidden;
