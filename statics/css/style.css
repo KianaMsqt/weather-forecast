@@ -2,7 +2,8 @@
     background-color: #637e9a !important;
 }
 
-.btn-primary.search-button {
+.btn-primary.search-button,
+.btn-primary.history-button {
     background-color: #255280;
     border-color: #255280;
 }
@@ -16,4 +17,10 @@
     float: right;
     /* Shrink today's icon to make it bigger than 5-day forecast */
     scale: 1.5;
+}
+
+@media only screen and (max-width: 990px) {
+    .list-group:not(.show) {
+        visibility: hidden;
+    }
 }
