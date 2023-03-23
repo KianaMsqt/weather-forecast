@@ -10,3 +10,10 @@
 .today-forecast.empty {
     opacity: 0;
 }
+
+.today-icon {
+    display: block;
+    float: right;
+    /* Shrink today's icon to make it bigger than 5-day forecast */
+    scale: 1.5;
+}

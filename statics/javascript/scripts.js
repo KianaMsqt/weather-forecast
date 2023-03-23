@@ -69,9 +69,18 @@ $(document).ready(function() {
 
             // Get the temperature for today's forecast (the first item in the response list)
             var todayTemp = forecastData.list[0].main.temp;
+            var todayWind = forecastData.list[0].wind.speed;
+            var todayHumidity = forecastData.list[0].main.humidity;
+            var todayIcon = "https://openweathermap.org/img/w/" + forecastData.list[i].weather[0].icon + ".png";
 
-            // Display the temperature on the page
-            $('#today').removeClass("empty").text("Today's temperature is " + todayTemp + " degrees Celsius.");
+            // Display today's temperature on the page
+            var $city = $('<h2 style="text-transform: capitalize">' + inputQuery + "  " + date + '</h2>');
+            var $todayTemp = $("<strong>Temp: </strong>" + todayTemp + " °C <br />");
+            var $todayWind = $("<strong>Wind: </strong>" + todayWind + " KPH <br />");
+            var $todayHumidity = $("<strong>Humidity: </strong>" + todayHumidity + "% <br />");
+            var $todayIcon = $( `<img class="today-icon" src="` + todayIcon + `" alt="icon" />` );
+
+            $('#today').removeClass( "empty" ).empty().append($city, $todayIcon, $todayTemp, $todayWind, $todayHumidity);            
 
           }
         });
