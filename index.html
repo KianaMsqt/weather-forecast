@@ -28,7 +28,16 @@
           <button type="submit" class="btn btn-primary btn-block search-button" id="search-button" aria-label="submit search">Search</button>
           <hr class="hr weather-hr" />
         </form>
-        <div class="list-group" id="history"></div>
+        <div class="d-lg-none">
+          <button class="btn btn-primary btn-block history-button mb-3" type="button" data-toggle="collapse" data-target="#history" aria-expanded="false" aria-controls="history">
+            See 10 recent searches
+          </button>
+        </div>
+        <div class="d-lg-block">
+          <div class="list-group" id="history" aria-expanded="true">
+            <ul class="list-group"></ul>
+          </div>
+        </div>
       </aside>
 
       <div class="col-lg-9 pb-3">
@@ -44,6 +53,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="./statics/javascript/scripts.js"></script>
 </body>
 
